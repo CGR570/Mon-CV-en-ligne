@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+</style>);
+@font-face {
+    font-family: Raleway;
+    src: url('../fonts/Raleway-Bold.woff2');
+    src: url('../fonts/Raleway-Italic.woff2');
+    src: url('../fonts/Raleway-Regular.woff2');
+    src: url('../fonts/Raleway-Bold.ttf') format('truetype');
+    src: url('../fonts/Raleway-Italic.ttf') format('truetype');
+    src: url('../fonts/Raleway-Regular.ttf') format('truetype');
+}
+/* Initialiser les marges-éviter les marges auto des navigateurs */
+*{
+    margin:0 ;
+    padding: 0 ;
+    box-sizing: border-box;
+}
+/* bandeau haut de CV-cobfig photo-insert icones-backgrounf */
+figure{
+    width: 150px;
+    height: 150px;
+}
+#cgr{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ffffff;
+    }
+header{
+    background-color: #17abb3;
+    color: #ffffff;
+}
+.contact, a{
+    list-style: none;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    text-align: end;
+}
+/* Définir la police de caractére des titres */
+h1,h2{
+    font-family: 'Lato', sans-serif;
+    text-align: right;
+}
+/* définir la largeur maximale de la page et les bordures de coté */
+body{
+    max-width: 1160px;
+    margin: auto;
+    box-shadow: -5em 0 0 #f3f3f3, 5em 0 0 #f3f3f3;
+    
+
+}
