@@ -36,12 +36,46 @@ header{
     color: #ffffff;
     flex-basis: 100%;
 }
-.contact, a{
-    list-style: none;
-    color: #ffffff;
-    text-decoration: none;
-    font-family: 'Raleway', sans-serif;
-    text-align: end;
+/* positionnement des textes et icones de contact entête-Alignement des listes en cote à cote */
+.titre{
+   text-align: end;
+   position: relative;
+   right:215px;
+   bottom: 85px;
+   font-weight: 500;
+   font-size:27px;
+} 
+.tete{
+text-align:end;
+position: relative;
+right: 220px;
+bottom: 90px;
+font-size: 50px;
+}
+.listco{
+position: relative;
+left: 600px;
+bottom: 70px;
+}
+.listco1{
+position: relative;
+left: 600px;
+bottom: 70px;
+}
+.listco, .listco1{
+display: inline-block;
+list-style: none;
+line-height: 30px;
+margin-right: 30px;
+margin-top: 10px;
+font-family: 'Raleway', sans-serif;
+}
+a{
+   list-style: none;
+   color: #ffffff;
+   text-decoration: none;
+   font-family: 'Raleway', sans-serif;
+   text-align: end;
 }
 /* Définir la police de caractére des titres */
 h1,h2,h3{
@@ -54,39 +88,49 @@ h1,h2,h3{
     color: black;
     font-size: medium;
     text-indent: 30px;
+    font-family: 'Raleway', sans-serif;
 }
-/* définir la largeur maximale de la page et les bordures de coté-mettre en flexbox*/
+/* définir la largeur maximale de la page et les bordures de coté-mettre en flexbox-mettre la police Railway*/
 body{
     max-width: 1160px;
     margin: auto;
-    box-shadow: -5em 0 0 #f3f3f3, 5em 0 0 #f3f3f3;
+    box-shadow: -5em 0 0 #f5f5f5, 5em 0 0 #f5f5f5;
     display: flex;
     flex-direction:row;
     flex-wrap: wrap;
     position: relative;
     min-height: 100%;
     padding-bottom: 50px;
+    font-family: 'Raleway', sans-serif;
  }
  /* Définir couleur des titres aside et corps du cv */
  aside h2, main section h2{
     color: #17abb3;
     font-weight:500;
-     }   
- /* Définir la largeur du corps du CV et de aside */
- main section{
-    position: relative;
-    flex: basis 70%;
-    border: 2px solid black;
-      
+    margin-bottom: 30px;
+    margin-top: 30px;
+ }   
+ /* Définir la largeur du corps du CV(profil-formation..)+indentation et de aside */
+ .profil{
+    position: absolute;
+    flex: basis 70%; 
+    text-indent: 30px;
+    font-family: 'raleway', sans-serif;
  }
+.cursus{
+   position: relative;
+   margin-top: 250px;
+   flex-basis: 70%;
+   
+}
  aside{
     position: relative;
     flex-basis: 30%;
-    border: 2px solid black;
     margin-right: 30px;
-    background-color: #f3f3f3;
+    background-color: #e3e3e3;
+    font-family: 'Raleway';
  }
- /* Définir le rating des compétence */
+ /* Définir positionnement et couleur du pied de page */
   footer{
     position:absolute;
     bottom:0;
@@ -96,16 +140,80 @@ body{
     color: #ffffff;
     background-color: #17abb3;
  }
+ /* Alignement compétence et star rating HTML */
+.format, .form1{
+   display: inline-block;
+   margin-bottom: 5px;
+}
+/* masquer les boutons radio de la liste Compétences */
  .form1 input{
     display: none;
  }
+ /* Positionner les étoiles*/
  .form1{
    position: absolute;
-   right: 10px;
+   right: 20px;
  }
- .form1 label #color{
+ /* Mettre les étoiles en bleu */
+ .form1, .form2, .form3, .form4 label .fa-solid{
     color: #17abb3;
  }
+ /* Mettre les étoiles vides non cochées en contour bleu */
+ .form1, .form2, .form3, .form4 label .fa-regular{
+ color: #17abb3;
+ }
+ /* Mise en forme du rating CSS */
+ .formcss{
+   font-size: 20px;
+   text-indent: 30px;
+   font-family: 'Raleway', sans-serif;
+ }
+ .formcss, .form2{
+   display: inline-block;
+   margin-bottom: 5px;
+ }
+ .form2 input{
+   display:none
+ }
+ .form2{
+   position: absolute;
+   right: 20px;
+   }
+ /* Mise en forme du rating Javascript */
+ .formjs{
+   font-size: 18px;
+   text-indent: 30px;
+   font-family: 'Raleway', sans-serif;
+ }
+ .form3 input{
+   display: none;
+ }
+ .form3{
+   position: absolute;
+   right: 20px;
+ }
+ .form3, .formjs{
+   display: inline-block;
+   margin-bottom: 5px;
+ }
+ /* Mise en forme PHP */
+ .formphp{
+   font-size: 18px;
+   text-indent: 30px;
+   font-family: 'Raleway', sans-serif;
+ }
+ .form4 input{
+   display: none;
+ }
+ .form4{
+   position: absolute;
+   right: 20px;
+ }
+ .form4, .formphp{
+   display: inline-block;
+   margin-bottom: 5px;
+ }
+ /* Définir le gras et la taille du titre et aligner les 2 listes */
  .langue{
     font-weight: bold;
     font-size: large;
@@ -121,4 +229,13 @@ body{
  }
  .langue, .niveau{
     display: inline-block;
+ }
+ /* Mise en forme de la liste des qualités */
+ .qualites, .interet{
+   font-size: large;
+   margin-left: 45px;
+ }
+ /* Diminuer l'opacité des icones réseau social au survol */
+ .opacity :hover{
+   opacity:0.7;
  }
