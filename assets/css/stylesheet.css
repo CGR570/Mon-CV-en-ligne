@@ -77,7 +77,7 @@ a{
    text-align: end;
 }
 /* Définir la police de caractére des titres */
-h1,h2,h3{
+h1,h2{
     font-family: 'Lato', sans-serif;
     text-indent: 30px;
 }
@@ -101,8 +101,8 @@ body{
     flex-direction:row;
     flex-wrap: wrap;
     position: relative;
-    min-height: 100%;
-    padding-bottom: 50px;
+    min-height: 100vh;
+    padding-bottom: 81px;
     font-family: 'Raleway', sans-serif;
  }
  /* Définir couleur des titres aside et corps du cv */
@@ -121,10 +121,10 @@ body{
     text-align: justify;
     margin-right: 30px;
  }
-.cursus{
-   position: relative;
-   margin-top: 300px;
-   flex-basis: 65%;
+ .cursu{
+  position: relative;
+  margin-top: 300px;
+  flex-basis: 65%;
    
 }
  aside{
@@ -143,6 +143,9 @@ body{
     text-align: center;
     color: #ffffff;
     background-color: #17abb3;
+    line-height: 25px;
+    padding-bottom: 10px;
+    padding-top: 10px;
  }
  /* Alignement compétence et star rating HTML */
 .format, .form1{
@@ -243,11 +246,22 @@ body{
  .opacity :hover{
    opacity:0.7;
  }
+ .opacity{
+ word-spacing: 10px;
+ margin-top: 10px;
+ /*Redimensionner les icones réseau social  */
+}
+ .fa-brands{
+  font-size: 20px;
+ }
+ /* Mise en forme de la partie Formations */
  .annee{
  text-align: right;
  list-style: none;
  line-height: 55px;
  color: #17abb3;
+ position: relative;
+ left: 230px;
  }
  .diplome{
    list-style: none;
@@ -255,4 +269,50 @@ body{
  .annee, .diplome{
    display: inline-block;
    vertical-align: top;
+   font-family: 'Raleway', sans-serif;
  }
+ /* Mise en forme des lignes en gras et italique */
+ .bold{
+  font-weight: bold;
+ }
+ .it{
+  font-style: italic;
+ }
+ /* Mise en forme de la partie stage */
+  .stage, .annee{
+    display: inline-block;
+    vertical-align:top;
+ }
+ .stage{
+  list-style: none;
+  margin-right: 210px;
+   }
+ /* Mise en forme de la partie Expériences Pro résumées */
+ .exp{
+  list-style: none;
+  max-width: 420px;
+  overflow-wrap: break-word;
+  margin-right: -85px;
+  line-height: 25px;
+  margin-bottom: 100px;
+ }
+ .exp, .annee{
+  display: inline-block;
+  vertical-align: top;
+  font-family: 'Raleway', sans-serif;
+ }
+ /* effet survol lignes formation-stage-expériences en fond gris et bordure bleue */
+ .diplome:hover li, .annee:hover li{
+  background-color: #e3e3e3;
+  border-left: solid 4px #17abb3;
+}
+.stage:hover li{
+  background-color: #e3e3e3;
+  border-left: solid 4px #17abb3;
+  }
+  .exp:hover{
+  background-color: #e3e3e3;
+  border-left: solid 4px #17abb3;
+  }
+ 
+ 
