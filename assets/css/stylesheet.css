@@ -111,29 +111,33 @@ body{
     font-weight:500;
     margin-bottom: 30px;
     margin-top: 30px;
- }   
+ } 
  /* Définir la largeur du corps du CV(profil-formation..)+indentation et de aside */
  .profil{
-    position: absolute;
-    flex: basis 65%; 
+    display: flex;  
+    flex-direction: column;
+    width: 65%;
     text-indent: 30px;
     font-family: 'raleway', sans-serif;
     text-align: justify;
     margin-right: 30px;
- }
+    margin-left: 370px;
+    position: absolute;
+    top: 320px;
+  }
  .cursu{
   position: relative;
-  margin-top: 300px;
-  flex-basis: 65%;
-   
-}
+  margin-top: -510px;
+  width: 65%;
+  margin-left: 370px;
+  }
  aside{
     position: relative;
     flex-basis: 30%;
     margin-right: 30px;
     background-color: #e3e3e3;
     font-family: 'Raleway';
- }
+  }
  /* Définir positionnement et couleur du pied de page */
   footer{
     position:absolute;
@@ -254,65 +258,65 @@ body{
  .fa-brands{
   font-size: 20px;
  }
- /* Mise en forme de la partie Formations */
- .annee{
- text-align: right;
- list-style: none;
- line-height: 55px;
- color: #17abb3;
- position: relative;
- left: 230px;
+ /* Mise en forme de la partie droite du CV - Formations-Expériences-Stage- */
+ /* Mise en forme de la partie Stage */
+ .experience{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Raleway',sans-serif;
+  margin-bottom: 15px;
+  padding: 5px;
  }
- .diplome{
-   list-style: none;
+    /* Effet de survol fond et bordure */
+ .experience:hover{
+  background-color: #e3e3e3;
+  border-left:4px solid #17abb3;
  }
- .annee, .diplome{
-   display: inline-block;
-   vertical-align: top;
-   font-family: 'Raleway', sans-serif;
+    /* Conteneur de titre-formation et annee */
+.detail{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
  }
- /* Mise en forme des lignes en gras et italique */
- .bold{
+ /* mise en forme des polices de caractères et marge de drote des dates */
+ .titre-experience{
   font-weight: bold;
  }
- .it{
+ .annee{
+  color: #17abb3;
+  margin-left: 160px;
+   }
+ .entreprise{
   font-style: italic;
  }
- /* Mise en forme de la partie stage */
-  .stage, .annee{
-    display: inline-block;
-    vertical-align:top;
- }
- .stage{
-  list-style: none;
-  margin-right: 210px;
-   }
- /* Mise en forme de la partie Expériences Pro résumées */
- .exp{
-  list-style: none;
-  max-width: 420px;
-  overflow-wrap: break-word;
-  margin-right: -85px;
-  line-height: 25px;
-  margin-bottom: 100px;
- }
- .exp, .annee{
-  display: inline-block;
-  vertical-align: top;
-  font-family: 'Raleway', sans-serif;
- }
- /* effet survol lignes formation-stage-expériences en fond gris et bordure bleue */
- .diplome:hover li, .annee:hover li{
-  background-color: #e3e3e3;
-  border-left: solid 4px #17abb3;
+ /* mise en forme de la partie formation du CV */
+.liformation{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  padding: 5px;
 }
-.stage:hover li{
+    /* effet de survol formation par formation avec leur année */
+.liformation:hover{
   background-color: #e3e3e3;
-  border-left: solid 4px #17abb3;
+  border-left:4px solid #17abb3;
+}
+/* Conteneur DIPLOME : titre-formation et annee */
+.diplome{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
   }
-  .exp:hover{
-  background-color: #e3e3e3;
-  border-left: solid 4px #17abb3;
+  .ecole{
+    font-style: italic;
   }
- 
- 
+  .titre-formation{
+    font-weight: bold;
+  }
+  /* mise en forme de la partie Expérience du CV */
+.titre-experience, .entreprise{
+  width: 420px;
+}
+  
