@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @font-face {
     font-family: Raleway;
-    src: url('../fonts/Raleway-Bold.woff2');
-    src: url('../fonts/Raleway-Italic.woff2');
-    src: url('../fonts/Raleway-Regular.woff2');
+    src: url('../fonts/Raleway-Bold.woff2') format('woff2');
+    src: url('../fonts/Raleway-Italic.woff2') format('woff2');
+    src: url('../fonts/Raleway-Regular.woff2') format('woff2');
     src: url('../fonts/Raleway-Bold.ttf') format('truetype');
     src: url('../fonts/Raleway-Italic.ttf') format('truetype');
     src: url('../fonts/Raleway-Regular.ttf') format('truetype');
-}
+ }
 /* Initialiser les marges-éviter les marges auto des navigateurs */
 *{
     margin:0 ;
@@ -79,7 +79,7 @@ a{
 /* Définir la police de caractére des titres */
 h1,h2{
     font-family: 'Lato', sans-serif;
-    text-indent: 30px;
+    text-indent: 5px;
 }
 .trait{
    border-bottom: 1px solid #e3e3e3;
@@ -104,7 +104,23 @@ body{
     min-height: 100vh;
     padding-bottom: 81px;
     font-family: 'Raleway', sans-serif;
+    justify-content: flex-start;
  }
+ .container{
+  display: flex;
+  align-items: stretch;
+ }
+ main{
+ flex: 2;
+ padding: 20px;
+ }
+ aside{
+  flex: 1;
+  background-color: #e3e3e3;
+  padding: 20px;
+  height:auto;
+  position: relative;
+}
  /* Définir couleur des titres aside et corps du cv */
  aside h2, main section h2{
     color: #17abb3;
@@ -112,44 +128,34 @@ body{
     margin-bottom: 30px;
     margin-top: 30px;
  } 
+ .qualites, .interet{
+  list-style-type: square;
+ }
  /* Définir la largeur du corps du CV(profil-formation..)+indentation et de aside */
  .profil{
     display: flex;  
     flex-direction: column;
-    width: 65%;
+    width: 100%;
     text-indent: 30px;
-    font-family: 'raleway', sans-serif;
     text-align: justify;
     margin-right: 30px;
-    margin-left: 370px;
-    position: absolute;
-    top: 320px;
+    position: relative;
+    padding: 25px;
   }
  .cursu{
-  position: relative;
-  margin-top: -510px;
-  width: 65%;
-  margin-left: 370px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 20px;
   }
- aside{
-    position: relative;
-    flex-basis: 30%;
-    margin-right: 30px;
-    background-color: #e3e3e3;
-    font-family: 'Raleway';
- }
- /* Définir positionnement et couleur du pied de page */
+   /* Définir positionnement et couleur du pied de page */
   footer{
-    position:absolute;
-    bottom:0;
-    left: 0;
-    right: 0;
+    position:relative;
+    width: 100%;
     text-align: center;
     color: #ffffff;
     background-color: #17abb3;
     line-height: 25px;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    padding: 10px;
  }
  /* Alignement compétence et star rating HTML */
 .format, .form1{
@@ -161,9 +167,23 @@ body{
     display: none;
  }
  /* Positionner les étoiles*/
- .form1{
-   position: absolute;
-   right: 20px;
+ .rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+ }
+ .rating p{
+  flex: 1;
+  text-align: left;
+  font-weight: bold;
+ }
+ .form1, .form2, .form3, .form4{
+  position: static;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  gap: 10px;
  }
  /* Mettre les étoiles en bleu */
  .form1, .form2, .form3, .form4 label .fa-solid{
@@ -172,6 +192,11 @@ body{
  /* Mettre les étoiles vides non cochées en contour bleu */
  .form1, .form2, .form3, .form4 label .fa-regular{
  color: #17abb3;
+ }
+ /* largeur fixe-alignement texte */
+ .format, .formcss, .formjs, .formphp{
+  min-width: 100px;
+  text-align: left;
  }
  /* Mise en forme du rating CSS */
  .formcss{
@@ -186,11 +211,7 @@ body{
  .form2 input{
    display:none
  }
- .form2{
-   position: absolute;
-   right: 20px;
-   }
- /* Mise en forme du rating Javascript */
+  /* Mise en forme du rating Javascript */
  .formjs{
    font-size: 18px;
    text-indent: 30px;
@@ -199,11 +220,7 @@ body{
  .form3 input{
    display: none;
  }
- .form3{
-   position: absolute;
-   right: 20px;
- }
- .form3, .formjs{
+  .form3, .formjs{
    display: inline-block;
    margin-bottom: 5px;
  }
@@ -216,11 +233,7 @@ body{
  .form4 input{
    display: none;
  }
- .form4{
-   position: absolute;
-   right: 20px;
- }
- .form4, .formphp{
+  .form4, .formphp{
    display: inline-block;
    margin-bottom: 5px;
  }
@@ -235,7 +248,7 @@ body{
     font-size: large;
     list-style: none;
     position: absolute;
-    right: 10px;
+    right: 20px;
     text-align: right;
  }
  .langue, .niveau{
